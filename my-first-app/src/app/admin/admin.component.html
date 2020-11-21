@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+            <label>Username</label>
+            <input type="text" class="form-control" [(ngModel)] = "Username">
+            <p>{{ Username }}</p>
+            <label>Password</label>
+            <input type="password" class="form-control" [(ngModel)] = "Password">
+            <button class="btn btn-primary" [disabled] = " Username === ' ' && Password === ' '"
+            (click)="Username = ' ' && Password = ' '">Reset Admin</button>
+            <button class="btn btn-primary" 
+            (click) = "onCreateAdmin()">Add Admin</button>
+            <p *ngIf="adminCreated">Admin created with {{ Username }}</p>
+            <p>admin works!</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
